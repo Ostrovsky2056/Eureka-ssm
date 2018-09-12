@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server" />
         <module name="eureka-ssm" />
+        <module name="service-client" />
+        <module name="service-ribbon" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,0 +1,14 @@
+server:
+  #端口号
+  port: 8871
+
+spring:
+  application:
+    #服务名称
+    name: service-client
+
+eureka:
+  client:
+    serviceUrl:
+      #当前服务需要注册的注册中心服务地址（此处注册中心服务为集群）
+      defaultZone: http://localhost:8881/eureka/,http://localhost:8882/eureka/
