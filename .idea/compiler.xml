@@ -8,8 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server" />
         <module name="eureka-ssm" />
-        <module name="serice-client" />
-        <module name="serice-ribbon" />
+        <module name="service-client" />
+        <module name="service-feign" />
+        <module name="service-ribbon" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -5,7 +5,7 @@ server:
 spring:
   application:
     #服务名称
-    name: serice-ribbon
+    name: service-ribbon
 
 eureka:
   client:

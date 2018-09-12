@@ -5,7 +5,7 @@ server:
 spring:
   application:
     #服务名称
-    name: serice-client
+    name: service-client
 
 eureka:
   client:

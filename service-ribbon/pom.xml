@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ostrovsky</groupId>
-    <artifactId>serice-ribbon</artifactId>
+    <artifactId>service-ribbon</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>serice-ribbon</name>
+    <name>service-ribbon</name>
     <description>Demo project for Spring Boot</description>
 
     <!-- spring boot的依赖管理器 -->
