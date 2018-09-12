@@ -8,9 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server" />
         <module name="eureka-ssm" />
-        <module name="service-client" />
-        <module name="service-ribbon" />
+        <module name="serice-client" />
+        <module name="serice-ribbon" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka-client1" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
