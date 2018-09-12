@@ -2,6 +2,7 @@ package com.ostrovsky.serviceclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @program: eurekassm
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create: 2018-09-12 17:41:11
  */
 @SpringBootApplication
+@EnableEurekaClient
 public class ServiceClientApplication {
 
     public static void main(String[] args) {

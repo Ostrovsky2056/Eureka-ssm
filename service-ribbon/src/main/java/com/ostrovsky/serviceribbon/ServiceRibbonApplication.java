@@ -2,6 +2,8 @@ package com.ostrovsky.serviceribbon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
 /**
  * @program: eureka-ssm
  * @description: Ribbon服务启动入口
@@ -9,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create: 2018-09-07 13:55:25
  */
 @SpringBootApplication
+@EnableEurekaClient
 public class ServiceRibbonApplication {
 
     public static void main(String[] args) {

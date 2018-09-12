@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: eureka-ssm
+    name: eureka-server
 
 #注意代码中符号  ‘---’ 并不是注释，而是分隔符，标识多个开发环境配置或者说多个服务实例配置。
 #比如开发环境，测试环境，生产环境等；或者就是集群的多个服务实例配置
