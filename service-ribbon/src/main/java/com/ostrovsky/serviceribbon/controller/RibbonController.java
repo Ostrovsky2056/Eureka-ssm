@@ -25,7 +25,7 @@ public class RibbonController {
 
     /**
      * 通过此接口调用客户端接口
-     * @return
+     * @return 字符串
      */
     @GetMapping("/hello/{name}")
     public String world(@PathVariable("name") String name){
@@ -36,7 +36,7 @@ public class RibbonController {
 
     /**
      * 集群测试
-     * @return
+     * @return 字符串
      */
     @GetMapping("/testRibbon/{name}")
     public String testRibbon(@PathVariable("name") String name){
@@ -44,6 +44,11 @@ public class RibbonController {
         return restTemplate.getForObject(url, String.class);
     }
 
+    /**
+     * 断路器测试
+     * @param name
+     * @return
+     */
     @GetMapping("/testHystrix/{name}")
     public String testHystrix(@PathVariable("name") String name){
         return ribbonService.testHytrix(name);
