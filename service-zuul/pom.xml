@@ -4,21 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ostrovsky</groupId>
-    <artifactId>service-client</artifactId>
+    <artifactId>service-zuul</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>service-client</name>
+    <name>service-zuul</name>
     <description>Demo project for Spring Boot</description>
 
-    <!-- 引入spring boot的依赖管理器
-              它的作用就是管理boot需要的所有依赖，从而统一各种jar的版本号，避免了版本不一致而出现的问题。
-              所以，引入其他的依赖就可以省略版本号。当然也可以加上指定的版本号，从而取代默认的。
-    -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.4.RELEASE</version>
+        <version>2.0.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -30,32 +26,19 @@
     </properties>
 
     <dependencies>
-        <!-- 使用最新的 spring-cloud-starter-netflix-eureka-server，而spring-cloud-starter-eureka-server已经过期。
-             spring cloud中discovery service有许多种实现（eureka、consul、zookeeper等等）
-             @EnableDiscoveryClient基于spring-cloud-commons；
-             @EnableEurekaClient基于spring-cloud-netflix。
-             就是如果选用的注册中心是eureka，那么就推荐@EnableEurekaClient；
-             如果是其他的注册中心，那么推荐使用@EnableDiscoveryClient。
-        -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-            <version>1.4.4.RELEASE</version>
-        </dependency>
-
-        <!-- 引入web依赖，实现web访问程序 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- 引入eureka client依赖，提供对eureka客户端的支持(此处可以导入server的bao) -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
 
-        <!-- 提供spring boot的单元测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -63,10 +46,6 @@
         </dependency>
     </dependencies>
 
-    <!-- 引入spring cloud的依赖管理器
-         与spring-boot-starter-parent的作用一样，不同的是spring-cloud-dependencies是对cloud的依赖管理。
-         如：spring-cloud-starter-config、spring-cloud-starter-netflix-eureka-server
-    -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -79,7 +58,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- 添加spring boot的maven插件 -->
     <build>
         <plugins>
             <plugin>

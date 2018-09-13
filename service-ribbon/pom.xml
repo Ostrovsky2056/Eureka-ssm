@@ -45,6 +45,12 @@
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
+        <!-- 不使用Eureka注册中心，提供只使用Ribbon进行服务调用 -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-ribbon</artifactId>-->
+        <!--</dependency>-->
+
         <!-- 提供对Hystrix断路器的支持 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

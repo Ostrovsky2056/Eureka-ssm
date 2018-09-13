@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 
 /**
  * @program: eurekassm
- * @description: RibbonAPI
+ * @description: RibbonController
  * @author: Ostrovsky
  * @create: 2018-09-12 19:02:43
  */

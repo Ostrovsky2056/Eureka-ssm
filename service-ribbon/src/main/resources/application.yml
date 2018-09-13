@@ -7,8 +7,16 @@ spring:
     #服务名称
     name: service-ribbon
 
+#使用Eureka注册中心
 eureka:
   client:
     serviceUrl:
       #当前服务需要注册的注册中心服务地址（此处注册中心服务为集群）
       defaultZone: http://localhost:8881/eureka/,http://localhost:8882/eureka/
+
+#不使用Eureka注册中心进行客户端访问
+#此处为客户端服务的服务名称
+#service-client:
+#  ribbon:
+#    #设置Ribbon客户端请求客户端服务的地址
+#    listOfServers: localhost:8871,localhost:8872
