@@ -11,6 +11,7 @@
     <name>service-zuul</name>
     <description>Demo project for Spring Boot</description>
 
+    <!-- 提供springboot的依赖管理器 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -26,19 +27,25 @@
     </properties>
 
     <dependencies>
+        <!-- 提供对web的支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- 客户端发现模块，提供对Eureka client客户端服务的支持 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
+        <!-- API网关模块，提供对zuul路由的支持 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
 
+        <!-- 提供对springboot单元测试的支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -48,6 +55,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- 提供springcloud的依赖管理器 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -60,6 +68,7 @@
 
     <build>
         <plugins>
+            <!-- 添加springboot的maven插件 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

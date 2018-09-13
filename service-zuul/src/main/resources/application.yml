@@ -1,0 +1,40 @@
+server:
+  #端口号
+  port: 8841
+
+spring:
+  application:
+    #服务名称
+    name: service-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8881/eureka/,http://localhost:8882/eureka/
+#  #服务实例配置（Eureka服务界面设置）
+#  instance:
+#    #使用本地ip，而不是机器名称
+#    prefer-ip-address: true
+#    #显示版本号
+#    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+#配置路由代理的服务
+#不配置的情况下，代理所有的服务
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+
+# 打印日志
+#logging:
+#  level:
+#    root: INFO
+#    com.springms: DEBUG
+
+
+#ribbon:
+#  ConnectTimeout: 3000
+#  ReadTimeout: 60000
