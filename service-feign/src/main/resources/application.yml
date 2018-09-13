@@ -1,0 +1,18 @@
+spring:
+  application:
+    #服务名称
+    name: service-feign
+
+server:
+  port: 8851
+
+eureka:
+  instance:
+    hosthome: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://master:8881/eureka/,http://master:8882/eureka/
+#feign需要开启断路器功能（D版本之后需要开启）
+feign:
+  hystrix:
+    enabled: true

@@ -11,6 +11,7 @@
     <name>service-feign</name>
     <description>Demo project for Spring Boot</description>
 
+    <!-- 提供spring boot的依赖管理器 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -26,11 +27,25 @@
     </properties>
 
     <dependencies>
+        <!-- 提供对Eureka客户端的支持（此处也可以导入server包：server也是一个客户端服务） -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <!-- 提供对web访问的支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 提供对feign的支持 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- 提供对spring boot test单元测试的支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -40,6 +55,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- 提供spring cloud的依赖管理器 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -50,6 +66,7 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 提供spring boot的maven插件 -->
     <build>
         <plugins>
             <plugin>

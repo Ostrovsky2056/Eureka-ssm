@@ -49,10 +49,10 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- 引入eureka server依赖，提供对eureka注册中心的支持 -->
+        <!-- 引入eureka client依赖，提供对eureka客户端的支持(此处可以导入server的bao) -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
         <!-- 提供spring boot的单元测试 -->

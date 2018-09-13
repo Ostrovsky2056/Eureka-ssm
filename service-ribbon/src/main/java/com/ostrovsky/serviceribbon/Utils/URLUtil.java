@@ -14,7 +14,7 @@ import java.util.Map;
 @Component
 public class URLUtil {
     //通用Url
-    public static final String CLIENT_URL = "HTTP://eureka-client";
+    public static final String CLIENT_URL = "HTTP://service-client";
 
     /**
      * 获取Ostrovsky客户端接口的访问地址（接口无参）

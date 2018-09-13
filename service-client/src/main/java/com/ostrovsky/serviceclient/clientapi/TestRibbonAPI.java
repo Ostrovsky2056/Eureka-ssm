@@ -1,6 +1,7 @@
 package com.ostrovsky.serviceclient.clientapi;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +21,10 @@ public class TestRibbonAPI {
      * @param request 请求
      * @return 打印当前服务端口号
      */
-    @GetMapping("/testRibbon")
-    public String testRibbon(HttpServletRequest request){
-        return "request from "+request.getServerPort();
+    @GetMapping("/testRibbon/{name}")
+    public String testRibbon(
+            @PathVariable("name") String name,
+            HttpServletRequest request){
+        return "Hi"+"\t"+name+"\trequest from "+request.getServerPort();
     }
 }

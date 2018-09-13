@@ -39,10 +39,16 @@
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
 
-        <!-- 提供对Eureka注册中心的支持 -->
+        <!-- 提供对Eureka客户端的支持（此处也可以导入server包：server也是一个client） -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+
+        <!-- 提供对Hystrix断路器的支持 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
 
         <!-- 提供对spring boot test单元测试的支持 -->
