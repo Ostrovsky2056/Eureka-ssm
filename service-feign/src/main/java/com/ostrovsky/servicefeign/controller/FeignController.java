@@ -23,4 +23,9 @@ public class FeignController {
     public String testFeign(@PathVariable("name") String name){
         return feignService.testFeign(name);
     }
+
+    @GetMapping("/testMock/{name}")
+    public String testMock(@PathVariable("name") String name) {
+        return name;
+    }
 }

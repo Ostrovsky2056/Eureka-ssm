@@ -51,6 +51,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- 提供对事务注解的支持 @Transactional -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>5.0.8.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
